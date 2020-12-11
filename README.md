@@ -1,4 +1,4 @@
-# Local Config Loader
+# About local-config-loader
 
 A set of helper functions for loading local configuration files.
 
@@ -12,9 +12,9 @@ Custom functions currently supported are related to Serverless projects on AWS, 
 
 ---
 
-## Runtime support
+# Runtime support
 
-<img src="//logo.clearbit.com/python.org?size=120">
+![Python Logo](https://logo.clearbit.com/python.org?size=120)
 
 > This is the Python runtime library, compatible with Python3.6+. Currently there isn't support for other runtimes. A Javascript/nodejs version is planned, but unscheduled.
 
