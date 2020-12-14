@@ -1,4 +1,4 @@
-from setuptools import setup
+from setuptools import find_packages, setup
 import pathlib
 
 
@@ -43,8 +43,8 @@ setup(
         'Topic :: Software Development :: Libraries',
         'Topic :: Utilities',
     ],
-    py_modules=['load_config'],
     package_dir={'': 'load_config'},
+    packages=find_packages(where='load_config')
     python_requires='>=3.6, <4',
     install_requires=[
         'PyYAML>=5.3.1',
