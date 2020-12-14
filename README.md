@@ -1,6 +1,6 @@
 # About Config Loader
 
-![Test Coverage](https://github.com/hacktlib/py-config-loader/raw/master/coverage.svg)
+![Test Coverage](https://raw.githubusercontent.com/hacktlib/py-config-loader/main/coverage.svg)
 
 Helper functions for loading configuration files. Useful to test/debug using config parameters.
 
