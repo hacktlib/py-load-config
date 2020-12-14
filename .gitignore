@@ -133,3 +133,7 @@ dmypy.json
 
 # VisualStudio Code
 .vscode/
+
+# Releases
+releases/
+release.sh
