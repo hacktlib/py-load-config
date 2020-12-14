@@ -47,7 +47,6 @@ setup(
     package_dir={'': 'load_config'},
     python_requires='>=3.6, <4',
     install_requires=[
-        'boto3>=1.16.30',
         'PyYAML>=5.3.1',
         'toml>=0.10.2',
     ],
