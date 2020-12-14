@@ -10,7 +10,7 @@ from custom_yaml import yaml_safe_load
 import default_filepath as fp
 
 
-def load_sam(
+def sam_all(
         template_filepath: Union[str, pathlib.Path] = fp.AWS_SAM_TEMPLATE,
         config_filepath: Union[str, pathlib.Path] = fp.AWS_SAM_CONFIG,
         loader: Union[json.loads, yaml.load] = yaml_safe_load,
@@ -18,17 +18,17 @@ def load_sam(
     '''Provide contents from both AWS SAM local Template and Config files
 
     Returns a nametuple with two attributes:
-        - `template` (equivalent to `load_sam_template` function)
-        - `config` (equivalent to `load_sam_config` function)
+        - `template` (equivalent to `sam_template` function)
+        - `config` (equivalent to `sam_config` function)
     '''
     sam = namedtuple('sam', 'template config')
     return sam(
-        template=load_sam_template(filepath=template_filepath),
-        config=load_sam_config(filepath=config_filepath),
+        template=sam_template(filepath=template_filepath),
+        config=sam_config(filepath=config_filepath),
     )
 
 
-def load_sam_template(
+def sam_template(
         filepath: Union[str, pathlib.Path] = fp.AWS_SAM_TEMPLATE,
         loader: Union[json.loads, yaml.load] = yaml_safe_load,
         ) -> dict:
@@ -36,7 +36,7 @@ def load_sam_template(
     return general_loader(filepath=filepath, loader=loader)
 
 
-def load_sam_config(
+def sam_config(
         filepath: Union[str, pathlib.Path] = fp.AWS_SAM_CONFIG,
         loader: toml.loads = toml.loads,
         ) -> dict:
@@ -44,7 +44,7 @@ def load_sam_config(
     return general_loader(filepath=filepath, loader=loader)
 
 
-def load_dynamodb(
+def dynamodb_local(
         filepath: Union[str, pathlib.Path] = fp.AWS_DYNAMODB_LOCAL_TEMPLATE,
         loader: yaml.load = yaml_safe_load,
         ) -> dict:
@@ -59,7 +59,7 @@ def load_dynamodb(
     }
 
 
-def load_lambda_env(
+def lambda_environ(
         function_name: str,
         filepath: Union[str, pathlib.Path] = fp.AWS_SAM_LAMBDA_ENV_VARS,
         loader: json.loads = json.loads,

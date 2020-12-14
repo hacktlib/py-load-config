@@ -21,12 +21,13 @@ dev_requirements = [
 pub_requirements = dev_requirements + ['twine>=3.2.0']
 
 setup(
-    name='config-loader',
+    name='load-config',
     version='0.1.0b0',
-    description='Helper functions for loading configuration files. Useful to test/debug using config parameters.',  # NOQA
+    description='Helper functions for loading configuration files. Useful ' +
+                'to test/debug using config parameters.',
     long_description=long_description,
     long_description_content_type='text/markdown',
-    url='https://github.com/hacktlib/py-config-loader/wiki',
+    url='https://github.com/hacktlib/py-load-config/wiki',
     author='Hackt.app',
     author_email='opensource@hackt.app',
     classifiers=[
@@ -42,8 +43,8 @@ setup(
         'Topic :: Software Development :: Libraries',
         'Topic :: Utilities',
     ],
-    py_modules=['config_loader'],
-    package_dir={'': 'config_loader'},
+    py_modules=['load_config'],
+    package_dir={'': 'load_config'},
     python_requires='>=3.6, <4',
     install_requires=[
         'boto3>=1.16.30',
@@ -55,8 +56,8 @@ setup(
         'pub': pub_requirements,
     },
     project_urls={
-        'Bug Reports': 'https://github.com/hacktlib/py-config-loader/issues',  # NOQA
+        'Bug Reports': 'https://github.com/hacktlib/py-load-config/issues',
         'Say Thanks!': 'http://lib.hackt.app',
-        'Source': 'https://github.com/hacktlib/py-config-loader/',
+        'Source': 'https://github.com/hacktlib/py-load-config/',
     },
 )

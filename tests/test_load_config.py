@@ -2,13 +2,13 @@ import json
 
 import pytest
 
-from config_loader import (
-    load_dynamodb,
-    load_lambda_env,
-    load_sam,
-    load_sam_config,
-    load_sam_template,
+from load_config import (
+    dynamodb_local,
     general_loader,
+    lambda_environ,
+    sam_all,
+    sam_config,
+    sam_template,
 )
 
 
@@ -29,7 +29,7 @@ def test_general_loader_raises_filenotfound():
 
 
 def test_sam_template():
-    template = load_sam_template(
+    template = sam_template(
         filepath='tests/dummy_files/aws-sam-template.yaml',
     )
 
@@ -44,7 +44,7 @@ def test_sam_template():
 
 
 def test_sam_config():
-    config = load_sam_config(
+    config = sam_config(
         filepath='tests/dummy_files/aws-sam-config.toml',
     )
 
@@ -62,13 +62,13 @@ def test_load_sam():
     sam_template_path = 'tests/dummy_files/aws-sam-template.yaml'
     sam_config_path = 'tests/dummy_files/aws-sam-config.toml'
 
-    sam = load_sam(
+    sam = sam_all(
         template_filepath=sam_template_path,
         config_filepath=sam_config_path,
     )
 
-    expected_template = load_sam_template(filepath=sam_template_path)
-    expected_config = load_sam_config(filepath=sam_config_path)
+    expected_template = sam_template(filepath=sam_template_path)
+    expected_config = sam_config(filepath=sam_config_path)
 
     assert hasattr(sam, 'template')
     assert hasattr(sam, 'config')
@@ -77,7 +77,7 @@ def test_load_sam():
 
 
 def test_dynamodb():
-    ddb = load_dynamodb(
+    ddb = dynamodb_local(
         filepath='tests/dummy_files/aws-dynamodb-local.yaml',
     )
 
@@ -93,7 +93,7 @@ def test_dynamodb():
 
 def test_lambda_env():
     try:
-        env = load_lambda_env(
+        env = lambda_environ(
             function_name='DummyFunction',
             filepath='tests/dummy_files/aws-sam-lambda-local-env-vars.json',
         )
@@ -106,7 +106,7 @@ def test_lambda_env():
 
 def test_lambda_env_keyerror_raised():
     with pytest.raises(KeyError):
-        load_lambda_env(
+        lambda_environ(
             function_name='InexistentFunction',
             filepath='tests/dummy_files/aws-sam-lambda-local-env-vars.json',
             fail_on_keyerror=True,
@@ -115,7 +115,7 @@ def test_lambda_env_keyerror_raised():
 
 def test_lambda_env_keyerror_not_raised():
     try:
-        load_lambda_env(
+        lambda_environ(
             function_name='InexistentFunction',
             filepath='tests/dummy_files/aws-sam-lambda-local-env-vars.json',
             fail_on_keyerror=False,
