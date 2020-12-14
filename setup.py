@@ -44,7 +44,7 @@ setup(
         'Topic :: Utilities',
     ],
     package_dir={'': 'load_config'},
-    packages=find_packages(where='load_config')
+    packages=find_packages(where='load_config'),
     python_requires='>=3.6, <4',
     install_requires=[
         'PyYAML>=5.3.1',
