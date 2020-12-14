@@ -1,0 +1,18 @@
+import os
+
+
+DEFAULT = {
+    'AWS_SAM_TEMPLATE': 'template.yaml',
+    'AWS_SAM_CONFIG': 'samconfig.toml',
+    'AWS_SAM_LAMBDA_ENV_VARS': 'local-env-vars.json',
+    'AWS_DYNAMODB_LOCAL_TEMPLATE': 'dynamodb-local.yaml'
+}
+
+AWS_SAM_TEMPLATE = os.environ.get(
+    'AWS_SAM_TEMPLATE_PATH', DEFAULT['AWS_SAM_TEMPLATE'])
+AWS_SAM_CONFIG = os.environ.get(
+    'AWS_SAM_CONFIG_PATH', DEFAULT['AWS_SAM_CONFIG'])
+AWS_SAM_LAMBDA_ENV_VARS = os.environ.get(
+    'AWS_SAM_LAMBDA_ENV_VARS_PATH', DEFAULT['AWS_SAM_LAMBDA_ENV_VARS'])
+AWS_DYNAMODB_LOCAL_TEMPLATE = os.environ.get(
+    'AWS_DYNAMODB_LOCAL_TEMPLATE_PATH', DEFAULT['AWS_DYNAMODB_LOCAL_TEMPLATE'])
