@@ -1,14 +1,16 @@
-# About local-config-loader
+# About Config Loader
 
-A set of helper functions for loading local configuration files.
+![Test Coverage](https://github.com/hacktlib/py-config-loader/raw/master/coverage.svg)
 
-We build this library on [Hackt](https://hackt.app) to support local development of internal projects and [public apps in our catalog](https://hackt.app/catalog). Learn more about other open-source libraries on [lib.hackt.app](https://lib.hackt.app/).
+Helper functions for loading configuration files. Useful to test/debug using config parameters.
 
-Custom functions currently supported are related to Serverless projects on AWS, which is, at the moment, our primary cloud setup:
+Custom functions currently supported:
 
-- [AWS SAM templates](https://docs.aws.amazon.com/serverless-application-model/latest/developerguide/sam-specification-template-anatomy.html)
-- [AWS SAM local Lambda environment variables](https://docs.aws.amazon.com/serverless-application-model/latest/developerguide/serverless-sam-cli-using-invoke.html#serverless-sam-cli-using-invoke-environment-file)
-- [DynamoDB local](https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/DynamoDBLocal.html) (Docker) configuration templates.
+- Load [AWS SAM template](https://docs.aws.amazon.com/serverless-application-model/latest/developerguide/sam-specification-template-anatomy.html)
+- Load AWS SAM local Lambda [environment variables](https://docs.aws.amazon.com/serverless-application-model/latest/developerguide/serverless-sam-cli-using-invoke.html#serverless-sam-cli-using-invoke-environment-file)
+- Load [DynamoDB local](https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/DynamoDBLocal.html) (Docker) configuration templates
+
+> We build this library on [Hackt](https://hackt.app) to support local development of internal projects and [public apps in our catalog](https://hackt.app/catalog). Learn more about other open-source libraries on [lib.hackt.app](https://lib.hackt.app/).
 
 ---
 
@@ -38,19 +40,19 @@ env_vars = template['Resources']['MyFunction']['Environment']['Variables']
 
 ## Documentation
 
-Documentation is available in the [repository wiki](https://github.com/hacktlib/py-local-config-loader/wiki).
+Documentation is available in the [repository wiki](https://github.com/hacktlib/py-config-loader/wiki).
 
 ---
 
 ## License
 
-This library is licensed under [Apache 2.0](https://raw.githubusercontent.com/hacktlib/py-local-config-loader/main/LICENSE).
+This library is licensed under [Apache 2.0](https://raw.githubusercontent.com/hacktlib/py-config-loader/main/LICENSE).
 
 ---
 
 ## Contributor guide
 
-Please check out guidelines in the [repository wiki](https://github.com/hacktlib/py-local-config-loader/wiki).
+Please check out guidelines in the [repository wiki](https://github.com/hacktlib/py-config-loader/wiki).
 
 ---
 
