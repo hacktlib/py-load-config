@@ -6,8 +6,8 @@ from typing import NamedTuple, Union
 import toml
 import yaml
 
-from custom_yaml import yaml_safe_load
-import default_filepath as fp
+from load_config.custom_yaml import yaml_safe_load
+import load_config.default_filepath as fp
 
 
 def sam_all(

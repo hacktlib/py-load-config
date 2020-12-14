@@ -22,7 +22,7 @@ pub_requirements = dev_requirements + ['twine>=3.2.0']
 
 setup(
     name='load-config',
-    version='0.1.2b0',
+    version='0.1.3b5',
     description='Helper functions for loading configuration files. Useful ' +
                 'to test/debug using config parameters.',
     long_description=long_description,
@@ -43,8 +43,8 @@ setup(
         'Topic :: Software Development :: Libraries',
         'Topic :: Utilities',
     ],
-    package_dir={'': 'load_config'},
-    packages=find_packages(where='load_config'),
+    packages=find_packages(where='src'),
+    package_dir={'': 'src'},
     python_requires='>=3.6, <4',
     install_requires=[
         'PyYAML>=5.3.1',

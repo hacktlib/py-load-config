@@ -2,7 +2,7 @@ from functools import partial
 
 import yaml
 
-from constants import AWS_CUSTOM_YAML_CONSTRUCTOR_NAMES
+from load_config.constants import AWS_CUSTOM_YAML_CONSTRUCTOR_NAMES
 
 
 def aws_yaml_constructor(loader, node):

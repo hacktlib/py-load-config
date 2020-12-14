@@ -2,7 +2,7 @@ from importlib import reload
 import os
 from unittest import mock
 
-import default_filepath as fp
+import load_config.default_filepath as fp
 
 
 def test_default_paths():

@@ -1,8 +1,8 @@
 from functools import partial
 from unittest.mock import Mock
 
-from constants import AWS_CUSTOM_YAML_CONSTRUCTOR_NAMES
-from custom_yaml import aws_yaml_constructor, yaml
+from load_config.constants import AWS_CUSTOM_YAML_CONSTRUCTOR_NAMES
+from load_config.custom_yaml import aws_yaml_constructor, yaml
 
 
 def test_yaml_dummy_aws_constructor_function():
@@ -24,7 +24,7 @@ def test_yaml_add_constructors():
 
 def test_yaml_safe_loader():
     import yaml
-    from custom_yaml import yaml_safe_load
+    from load_config.custom_yaml import yaml_safe_load
 
     assert isinstance(yaml_safe_load, partial)
     assert yaml_safe_load.func == yaml.load
