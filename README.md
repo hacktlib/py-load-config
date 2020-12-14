@@ -1,8 +1,8 @@
-# About Config Loader
+# Load Config
 
-![Test Coverage](https://raw.githubusercontent.com/hacktlib/py-config-loader/main/coverage.svg)
+![Test Coverage](https://raw.githubusercontent.com/hacktlib/py-load-config/main/coverage.svg)
 [![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
-[![Requirements Status](https://requires.io/github/hacktlib/py-config-loader/requirements.svg?branch=main)](https://requires.io/github/hacktlib/py-config-loader/requirements/?branch=main)
+[![Requirements Status](https://requires.io/github/hacktlib/py-load-config/requirements.svg?branch=main)](https://requires.io/github/hacktlib/py-load-config/requirements/?branch=main)
 [![Code Style](https://img.shields.io/badge/code%20style-PEP8-lightgrey)](https://github.com/hhatto/autopep8/)
 [![Code Formatter](https://img.shields.io/badge/formatter-autopep8-lightgrey)](https://github.com/hhatto/autopep8/)
 [![Test Framework](https://img.shields.io/badge/testing-pytest-lightgrey)](https://github.com/pytest-dev/pytest/)
@@ -30,7 +30,7 @@ Custom functions currently supported:
 
 # Installation and Usage
 
-Install with pip: `pip install local-config-loader`
+Install with pip: `pip install load-config`
 
 Load [AWS SAM template](https://docs.aws.amazon.com/serverless-application-model/latest/developerguide/sam-specification-template-anatomy.html) file:
 
@@ -46,19 +46,19 @@ env_vars = template['Resources']['MyFunction']['Environment']['Variables']
 
 ## Documentation
 
-Documentation is available in the [repository wiki](https://github.com/hacktlib/py-config-loader/wiki).
+Documentation is available in the [repository wiki](https://github.com/hacktlib/py-load-config/wiki).
 
 ---
 
 ## License
 
-This library is licensed under [Apache 2.0](https://raw.githubusercontent.com/hacktlib/py-config-loader/main/LICENSE).
+This library is licensed under [Apache 2.0](https://raw.githubusercontent.com/hacktlib/py-load-config/main/LICENSE).
 
 ---
 
 ## Contributor guide
 
-Please check out guidelines in the [repository wiki](https://github.com/hacktlib/py-config-loader/wiki).
+Please check out guidelines in the [repository wiki](https://github.com/hacktlib/py-load-config/wiki).
 
 ---
 
