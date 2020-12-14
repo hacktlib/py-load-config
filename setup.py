@@ -8,9 +8,9 @@ long_description = (here / 'README.md').read_text(encoding='utf-8')
 
 
 setup(
-    name='local-config-loader',
+    name='config-loader',
     version='0.1.0b0',
-    description='A set of helper functions for loading local configuration files.',  # NOQA
+    description='Helper functions for loading configuration files. Useful to test/debug using config parameters.',  # NOQA
     long_description=long_description,
     long_description_content_type='text/markdown',
     url='https://github.com/hacktlib/py-local-config-loader/wiki',
@@ -30,13 +30,23 @@ setup(
         'Topic :: Utilities',
     ],
     py_modules=['config_loader'],
+    package_dir={'': 'config_loader'},
     python_requires='>=3.6, <4',
     install_requires=[
         'boto3>=1.16.30',
+        'PyYAML>=5.3.1',
+        'toml>=0.10.2',
     ],
+    extras_require={
+        'dev': [
+            'pytest>=6.2.0',
+            'coverage>=5.3',
+            'coverage-badge>=1.0.1',
+        ],
+    },
     project_urls={
-        'Bug Reports': 'https://github.com/hacktlib/py-local-config-loader/issues',  # NOQA
+        'Bug Reports': 'https://github.com/hacktlib/py-config-loader/issues',  # NOQA
         'Say Thanks!': 'http://lib.hackt.app',
-        'Source': 'https://github.com/hacktlib/py-local-config-loader/',
+        'Source': 'https://github.com/hacktlib/py-config-loader/',
     },
 )
