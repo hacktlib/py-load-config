@@ -22,7 +22,7 @@ pub_requirements = dev_requirements + ['twine>=3.2.0']
 
 setup(
     name='load-config',
-    version='0.1.2b0',
+    version='0.1.1b0',
     description='Helper functions for loading configuration files. Useful ' +
                 'to test/debug using config parameters.',
     long_description=long_description,
