@@ -35,11 +35,17 @@ Install with pip: `pip install load-config`
 Load [AWS SAM template](https://docs.aws.amazon.com/serverless-application-model/latest/developerguide/sam-specification-template-anatomy.html) file:
 
 ```python
-from local_config_loader import load_sam_template
+import load_config
 
-template = load_sam_template('template.yaml')
+template = load_config.sam_template()
 
 env_vars = template['Resources']['MyFunction']['Environment']['Variables']
+```
+
+By default, `load_config` will look for SAM templates in `./template.yaml`. Optionally, specify a different path:
+
+```python
+template = load_config.sam_template(filepath='my-project/template.yml')
 ```
 
 ---
@@ -64,4 +70,6 @@ Please check out guidelines in the [repository wiki](https://github.com/hacktlib
 
 ## Acknowledgements
 
-<a href="https://clearbit.com">Logos provided by Clearbit</a>
+[Published & supported by **Hackt App**](https://hackt.app)
+
+[Logos provided by **Clearbit**](https://clearbit.com)
