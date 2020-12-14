@@ -4,8 +4,21 @@ import pathlib
 
 here = pathlib.Path(__file__).parent.resolve()
 
+# Get long version of description from README file
 long_description = (here / 'README.md').read_text(encoding='utf-8')
 
+# Developer-mode PyPi requirements
+dev_requirements = [
+    'pytest>=6.2.0',
+    'coverage>=5.3',
+    'coverage-badge>=1.0.1',
+    'wheel>=0.36.2',
+    'flake8>=3.8.4',
+    'autopep8>=1.5.4',
+]
+
+# Publisher-mode PyPi requirements
+pub_requirements = dev_requirements + ['twine>=3.2.0']
 
 setup(
     name='config-loader',
@@ -38,11 +51,8 @@ setup(
         'toml>=0.10.2',
     ],
     extras_require={
-        'dev': [
-            'pytest>=6.2.0',
-            'coverage>=5.3',
-            'coverage-badge>=1.0.1',
-        ],
+        'dev': dev_requirements,
+        'pub': pub_requirements,
     },
     project_urls={
         'Bug Reports': 'https://github.com/hacktlib/py-config-loader/issues',  # NOQA
