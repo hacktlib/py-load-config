@@ -5,7 +5,7 @@ DEFAULT = {
     'AWS_SAM_TEMPLATE': 'template.yaml',
     'AWS_SAM_CONFIG': 'samconfig.toml',
     'AWS_SAM_LAMBDA_ENV_VARS': 'local-env-vars.json',
-    'AWS_DYNAMODB_LOCAL_TEMPLATE': 'dynamodb-local.yaml'
+    'AWS_DYNAMODB_LOCAL_TEMPLATE': 'dynamodb-local.yaml',
 }
 
 AWS_SAM_TEMPLATE = os.environ.get(
