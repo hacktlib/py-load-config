@@ -1,6 +1,11 @@
 # About Config Loader
 
 ![Test Coverage](https://raw.githubusercontent.com/hacktlib/py-config-loader/main/coverage.svg)
+[![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
+[![Requirements Status](https://requires.io/github/hacktlib/py-config-loader/requirements.svg?branch=main)](https://requires.io/github/hacktlib/py-config-loader/requirements/?branch=main)
+[![Code Style](https://img.shields.io/badge/code%20style-PEP8-lightgrey)](https://github.com/hhatto/autopep8/)
+[![Code Formatter](https://img.shields.io/badge/formatter-autopep8-lightgrey)](https://github.com/hhatto/autopep8/)
+[![Test Framework](https://img.shields.io/badge/testing-pytest-lightgrey)](https://github.com/pytest-dev/pytest/)
 
 Helper functions for loading configuration files. Useful to test/debug using config parameters.
 
