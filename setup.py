@@ -26,7 +26,7 @@ setup(
     description='Helper functions for loading configuration files. Useful to test/debug using config parameters.',  # NOQA
     long_description=long_description,
     long_description_content_type='text/markdown',
-    url='https://github.com/hacktlib/py-local-config-loader/wiki',
+    url='https://github.com/hacktlib/py-config-loader/wiki',
     author='Hackt.app',
     author_email='opensource@hackt.app',
     classifiers=[
