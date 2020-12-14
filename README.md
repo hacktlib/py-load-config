@@ -1,6 +1,7 @@
 # Load Config
 
 ![Test Coverage](https://raw.githubusercontent.com/hacktlib/py-load-config/main/coverage.svg)
+![PyPI](https://img.shields.io/pypi/v/load-config)
 [![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
 [![Requirements Status](https://requires.io/github/hacktlib/py-load-config/requirements.svg?branch=main)](https://requires.io/github/hacktlib/py-load-config/requirements/?branch=main)
 [![Code Style](https://img.shields.io/badge/code%20style-PEP8-lightgrey)](https://github.com/hhatto/autopep8/)
