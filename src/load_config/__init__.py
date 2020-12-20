@@ -6,6 +6,7 @@ from typing import NamedTuple, Union
 import toml
 import yaml
 
+from load_config.extract import extract_sam_config_parameter_overrides
 from load_config.custom_yaml import yaml_safe_load
 import load_config.default_filepath as fp
 
@@ -41,7 +42,16 @@ def sam_config(
         loader: toml.loads = toml.loads,
         ) -> dict:
     '''Provide local SAM deployment Configuration file contents'''
-    return general_loader(filepath=filepath, loader=loader)
+    config = general_loader(filepath=filepath, loader=loader)
+
+    params = config['default']['deploy']['parameters']
+
+    if 'parameter_overrides' in params.keys():
+        params['parameter_overrides'] = extract_sam_config_parameter_overrides(
+            parameter_overrides=params['parameter_overrides'],
+        )
+
+    return config
 
 
 def dynamodb_local(

@@ -1,0 +1,11 @@
+version = 0.1
+[default]
+[default.deploy]
+[default.deploy.parameters]
+stack_name = "dummy-function"
+s3_bucket = "aws-sam-cli-managed-default-samclisourcebucket-123xyz"
+s3_prefix = "dummy-function"
+region = "us-east-1"
+profile = "dummy"
+capabilities = "CAPABILITY_IAM"
+parameter_overrides="DummyParameter=\"abc-123\" AnotherParameter=\"Hello=World!\""

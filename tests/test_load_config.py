@@ -58,6 +58,20 @@ def test_sam_config():
         .get('stack_name') == 'dummy-function'
 
 
+def test_sam_config_parameters():
+    config = sam_config(
+        filepath='tests/dummy_files/aws-sam-config-parameters.toml',
+    )
+
+    params = config['default']['deploy']['parameters'] \
+        .get('parameter_overrides')
+
+    assert type(params) is dict
+    assert len(params.keys()) == 2
+    assert params.get('DummyParameter') == 'abc-123'
+    assert params.get('AnotherParameter') == 'Hello=World!'
+
+
 def test_load_sam():
     sam_template_path = 'tests/dummy_files/aws-sam-template.yaml'
     sam_config_path = 'tests/dummy_files/aws-sam-config.toml'
